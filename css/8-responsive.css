@@ -30,9 +30,9 @@
   .category-grid {
     gap: 28px;
   }
-  
+
   .category-grid .category-card {
-    flex: 0 0 calc(33.333% - 18.67px);
+    flex: 0 0 calc(50% - 14px);
   }
 }
 
@@ -58,9 +58,9 @@
     padding: 0;
     justify-content: flex-start;
   }
-  
+
   .category-grid .category-card {
-    flex: 0 0 calc(33.333% - 16px);
+    flex: 0 0 calc(50% - 12px);
   }
 }
 
