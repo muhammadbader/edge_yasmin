@@ -118,12 +118,20 @@ add_action( 'wp_enqueue_scripts', function () {
         filemtime( get_stylesheet_directory() . '/css/10-mobile-premium.css' )
     );
 
-    /* 13. Search page styles (conditional) */
+    /* 13. Arabian Cultural Elements */
+    wp_enqueue_style(
+        'kent-arabian-culture',
+        get_stylesheet_directory_uri() . '/css/11-arabian-culture.css',
+        [ 'kent-mobile-premium' ],
+        filemtime( get_stylesheet_directory() . '/css/11-arabian-culture.css' )
+    );
+
+    /* 14. Search page styles (conditional) */
     if ( is_search() ) {
         wp_enqueue_style(
             'yasmin-search-css',
             get_stylesheet_directory_uri() . '/css/search.css',
-            [ 'kent-mobile-premium' ],
+            [ 'kent-arabian-culture' ],
             filemtime( get_stylesheet_directory() . '/css/search.css' )
         );
     }

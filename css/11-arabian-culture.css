@@ -1,0 +1,517 @@
+/* ============================================
+   ARABIAN CULTURAL DESIGN ELEMENTS
+   Geometric patterns, trader spirit, elegant heritage
+   ============================================ */
+
+/* === ARABIAN GEOMETRIC BACKGROUND PATTERNS === */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: var(--pattern-stars);
+  background-size: 100px 100px;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 1;
+}
+
+/* Subtle geometric overlay on sections */
+.producer-layout::before,
+.page-content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 300px;
+  background-image: var(--pattern-diamond);
+  background-size: 60px 60px;
+  opacity: 0.4;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* === ARABIAN DECORATIVE BORDERS === */
+.section-divider-arabian {
+  height: 2px;
+  background: var(--gradient-gold);
+  margin: var(--space-3xl) 0;
+  position: relative;
+  overflow: visible;
+}
+
+.section-divider-arabian::before,
+.section-divider-arabian::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 12px;
+  background: var(--gold-warm);
+  border: 2px solid var(--gray-50);
+  box-shadow: var(--shadow-gold);
+}
+
+.section-divider-arabian::before {
+  right: -6px;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.section-divider-arabian::after {
+  left: -6px;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+/* === TRADER SPIRIT - CONFIDENCE INDICATORS === */
+.trader-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  padding: var(--space-sm) var(--space-lg);
+  background: var(--gradient-prestige);
+  color: white;
+  border-radius: var(--radius-full);
+  font-weight: var(--font-bold);
+  font-size: var(--text-sm);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wide);
+  box-shadow: var(--shadow-gold);
+  position: relative;
+  overflow: hidden;
+}
+
+.trader-badge::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+  animation: shimmer-trade 3s infinite;
+}
+
+@keyframes shimmer-trade {
+  to { left: 100%; }
+}
+
+/* Trust indicator (for testimonials, certifications, etc.) */
+.trust-indicator {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-md);
+  background: rgba(219, 137, 84, 0.1);
+  border-right: 4px solid var(--gold-warm);
+  border-radius: var(--radius-md);
+  font-weight: var(--font-semibold);
+  color: var(--text-primary);
+}
+
+/* === ARABIAN CARD ENHANCEMENTS === */
+.card-arabian {
+  position: relative;
+  background: white;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-smooth);
+}
+
+/* Geometric corner accents */
+.card-arabian::before,
+.card-arabian::after {
+  content: '';
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background-image:
+    linear-gradient(45deg, var(--gold-warm) 0%, transparent 70%),
+    linear-gradient(-45deg, var(--heritage-red) 0%, transparent 70%);
+  opacity: 0.1;
+  transition: opacity var(--transition-base);
+}
+
+.card-arabian::before {
+  top: 0;
+  right: 0;
+  background-image: linear-gradient(135deg, var(--gold-warm) 0%, transparent 70%);
+}
+
+.card-arabian::after {
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(-45deg, var(--heritage-red) 0%, transparent 70%);
+}
+
+.card-arabian:hover::before,
+.card-arabian:hover::after {
+  opacity: 0.2;
+}
+
+.card-arabian:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-gold-lg);
+}
+
+/* === ARABIAN BUTTON STYLES === */
+.btn-trader {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  padding: 16px 40px;
+  background: var(--gradient-gold);
+  color: white;
+  border: none;
+  border-radius: var(--radius-xl);
+  font-family: var(--font-heading);
+  font-weight: var(--font-extrabold);
+  font-size: var(--text-base);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wide);
+  cursor: pointer;
+  overflow: hidden;
+  transition: all var(--transition-base);
+  box-shadow: var(--shadow-gold);
+}
+
+.btn-trader::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.btn-trader:hover::before {
+  width: 400px;
+  height: 400px;
+}
+
+.btn-trader:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: var(--shadow-gold-lg), 0 0 40px rgba(219, 137, 84, 0.3);
+}
+
+.btn-trader:active {
+  transform: translateY(-1px) scale(0.98);
+}
+
+/* Secondary trader button (outline style) */
+.btn-trader-outline {
+  background: transparent;
+  color: var(--gold-warm);
+  border: 3px solid var(--gold-warm);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-trader-outline::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  height: 100%;
+  background: var(--gradient-gold);
+  transition: right var(--transition-base);
+  z-index: -1;
+}
+
+.btn-trader-outline:hover::after {
+  right: 0;
+}
+
+.btn-trader-outline:hover {
+  color: white;
+  border-color: var(--gold-dark);
+}
+
+/* === HERITAGE QUOTE BLOCK === */
+.heritage-quote {
+  position: relative;
+  padding: var(--space-2xl) var(--space-xl);
+  background: var(--gradient-silk);
+  border-right: 6px solid var(--gold-warm);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-md);
+  font-family: var(--font-arabic);
+  font-size: var(--text-xl);
+  line-height: var(--leading-relaxed);
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+.heritage-quote::before {
+  content: '"';
+  position: absolute;
+  top: var(--space-md);
+  right: var(--space-md);
+  font-size: 80px;
+  font-family: var(--font-heading);
+  color: var(--gold-warm);
+  opacity: 0.2;
+  line-height: 1;
+}
+
+/* === ARABIAN STATS/NUMBERS === */
+.stat-arabian {
+  text-align: center;
+  padding: var(--space-xl);
+  background: white;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-md);
+  position: relative;
+  overflow: hidden;
+  transition: all var(--transition-base);
+}
+
+.stat-arabian::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 4px;
+  background: var(--gradient-gold);
+  transform: scaleX(0);
+  transition: transform var(--transition-base);
+}
+
+.stat-arabian:hover::before {
+  transform: scaleX(1);
+}
+
+.stat-arabian:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-gold);
+}
+
+.stat-number {
+  font-family: var(--font-heading);
+  font-size: var(--text-5xl);
+  font-weight: var(--font-black);
+  color: var(--gold-warm);
+  line-height: 1;
+  margin-bottom: var(--space-sm);
+  background: var(--gradient-gold);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.stat-label {
+  font-size: var(--text-base);
+  font-weight: var(--font-semibold);
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wide);
+}
+
+/* === GEOMETRIC SECTION HEADERS === */
+.section-header-arabian {
+  display: flex;
+  align-items: center;
+  gap: var(--space-lg);
+  margin-bottom: var(--space-2xl);
+  position: relative;
+}
+
+.section-header-arabian::before {
+  content: '';
+  width: 60px;
+  height: 60px;
+  background: var(--gradient-gold);
+  border-radius: var(--radius-md);
+  transform: rotate(45deg);
+  flex-shrink: 0;
+}
+
+.section-title-arabian {
+  font-family: var(--font-heading);
+  font-size: var(--text-3xl);
+  font-weight: var(--font-extrabold);
+  color: var(--text-primary);
+  margin: 0;
+  line-height: var(--leading-tight);
+}
+
+/* === TRADER TESTIMONIAL CARD === */
+.testimonial-arabian {
+  background: white;
+  padding: var(--space-2xl);
+  border-radius: var(--radius-2xl);
+  box-shadow: var(--shadow-lg);
+  position: relative;
+  overflow: hidden;
+}
+
+.testimonial-arabian::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 200px;
+  height: 200px;
+  background-image: var(--pattern-geometric);
+  background-size: 40px 40px;
+  opacity: 0.05;
+  pointer-events: none;
+}
+
+.testimonial-content {
+  font-size: var(--text-lg);
+  line-height: var(--leading-relaxed);
+  color: var(--text-secondary);
+  margin-bottom: var(--space-xl);
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.testimonial-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 3px solid var(--gold-warm);
+  box-shadow: var(--shadow-gold);
+}
+
+.testimonial-name {
+  font-weight: var(--font-bold);
+  font-size: var(--text-lg);
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.testimonial-role {
+  font-size: var(--text-sm);
+  color: var(--text-light);
+  margin: 0;
+}
+
+/* === PRESTIGE ICON WRAPPER === */
+.icon-prestige {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: var(--gradient-gold);
+  border-radius: var(--radius-lg);
+  color: white;
+  font-size: 24px;
+  box-shadow: var(--shadow-gold);
+  transition: all var(--transition-base);
+}
+
+.icon-prestige:hover {
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: var(--shadow-gold-lg);
+}
+
+/* === ARABIC NUMBER STYLING === */
+.number-arabic {
+  font-family: var(--font-arabic);
+  font-weight: var(--font-bold);
+  background: var(--gradient-gold);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* === HERITAGE ACCENT LINE === */
+.accent-line-heritage {
+  width: 100%;
+  height: 2px;
+  background: var(--gradient-sunset);
+  border-radius: var(--radius-full);
+  position: relative;
+  margin: var(--space-xl) 0;
+}
+
+.accent-line-heritage::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  width: 16px;
+  height: 16px;
+  background: var(--gold-warm);
+  border: 3px solid white;
+  border-radius: 50%;
+  box-shadow: var(--shadow-gold);
+}
+
+/* === MOBILE OPTIMIZATIONS === */
+@media (max-width: 768px) {
+  .section-header-arabian {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .section-header-arabian::before {
+    width: 40px;
+    height: 40px;
+  }
+
+  .section-title-arabian {
+    font-size: var(--text-2xl);
+  }
+
+  .heritage-quote {
+    padding: var(--space-xl) var(--space-lg);
+    font-size: var(--text-lg);
+  }
+
+  .stat-number {
+    font-size: var(--text-4xl);
+  }
+
+  .btn-trader {
+    padding: 14px 32px;
+    font-size: var(--text-sm);
+  }
+
+  body::before {
+    background-size: 60px 60px;
+  }
+}
+
+/* === ANIMATION FOR CULTURAL ELEMENTS === */
+@keyframes fadeInArabian {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-arabian {
+  animation: fadeInArabian 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+/* Stagger animation delays */
+.animate-arabian:nth-child(1) { animation-delay: 0.1s; }
+.animate-arabian:nth-child(2) { animation-delay: 0.2s; }
+.animate-arabian:nth-child(3) { animation-delay: 0.3s; }
+.animate-arabian:nth-child(4) { animation-delay: 0.4s; }
+.animate-arabian:nth-child(5) { animation-delay: 0.5s; }
