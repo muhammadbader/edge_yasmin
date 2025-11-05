@@ -1,0 +1,134 @@
+/* ============================================
+   KENTS BRAND ENHANCEMENTS & OVERRIDES
+   Final polish and global improvements
+   ============================================ */
+
+/* === GLOBAL BACKGROUND === */
+body {
+  background: linear-gradient(135deg, #FAF8F6 0%, #FFFFFF 100%);
+}
+
+/* === TEXT SELECTION === */
+::selection {
+  background: var(--primary-color);
+  color: white;
+}
+
+/* === FOCUS STATES === */
+a:focus-visible {
+  outline: 3px solid var(--primary-color);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* === HEADER STYLING === */
+.site-header,
+.ast-main-header-wrap {
+  border-bottom: 2px solid transparent;
+  background: linear-gradient(to bottom, #FFFFFF 0%, rgba(250, 248, 246, 0.95) 100%);
+  box-shadow: 0 2px 12px rgba(34, 28, 28, 0.06);
+}
+
+/* === SMOOTH SCROLLING === */
+html {
+  scroll-behavior: smooth;
+}
+
+/* === BUTTON ENHANCEMENTS === */
+button, .button, input[type="submit"] {
+  transition: all var(--transition-base);
+}
+
+button:hover, .button:hover, input[type="submit"]:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+/* === CARD HOVER EFFECTS === */
+.ast-post-card:hover,
+.post:hover {
+  box-shadow: var(--shadow-copper);
+}
+
+/* === FORM INPUT STYLING === */
+input:focus, textarea:focus, select:focus {
+  border-color: var(--primary-color);
+  box-shadow: var(--shadow-glow);
+  outline: none;
+}
+
+/* === BADGES & TAGS === */
+.tag, .badge, .category-badge {
+  background: var(--gradient-warm);
+  color: white;
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  font-weight: var(--font-semibold);
+  font-size: var(--text-sm);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-fast);
+}
+
+.tag:hover, .badge:hover, .category-badge:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+/* === FOOTER STYLING === */
+.site-footer {
+  background: var(--secondary-color);
+  color: var(--gray-100);
+  border-top: 3px solid var(--primary-color);
+}
+
+.site-footer a {
+  color: var(--primary-light);
+  transition: color var(--transition-fast);
+}
+
+.site-footer a:hover {
+  color: var(--primary-lighter);
+}
+
+/* === LOADING STATES === */
+.loading, .spinner {
+  border-color: var(--gray-200);
+  border-top-color: var(--primary-color);
+}
+
+/* === PRIMARY CTA BUTTONS === */
+.cta-button, .primary-action {
+  background: var(--gradient-primary);
+  color: white;
+  padding: 14px 32px;
+  border-radius: var(--radius-lg);
+  font-weight: var(--font-semibold);
+  box-shadow: var(--shadow-md);
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition-base);
+}
+
+.cta-button:hover, .primary-action:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-xl);
+  background: var(--gradient-warm);
+}
+
+/* === SECONDARY ACTION BUTTONS === */
+.secondary-action {
+  background: transparent;
+  color: var(--accent-color);
+  border: 2px solid var(--accent-color);
+  padding: 12px 30px;
+  border-radius: var(--radius-lg);
+  font-weight: var(--font-semibold);
+  transition: all var(--transition-base);
+}
+
+.secondary-action:hover {
+  background: var(--accent-color);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}

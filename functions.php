@@ -86,28 +86,36 @@ add_action( 'wp_enqueue_scripts', function () {
         filemtime( get_stylesheet_directory() . '/css/7-slider.css' )
     );
     
-    /* 10. Responsive Styles (MUST BE LAST) */
+    /* 10. Responsive Styles */
     wp_enqueue_style(
         'kent-responsive',
         get_stylesheet_directory_uri() . '/css/8-responsive.css',
-        [ 
-            'kent-variables', 
-            'kent-layout', 
-            'kent-components', 
-            'kent-single-product', 
-            'kent-producer-archive', 
-            'kent-header', 
-            'kent-slider' 
+        [
+            'kent-variables',
+            'kent-layout',
+            'kent-components',
+            'kent-single-product',
+            'kent-producer-archive',
+            'kent-header',
+            'kent-slider'
         ],
         filemtime( get_stylesheet_directory() . '/css/8-responsive.css' )
     );
 
-    /* 11. Search page styles (conditional) */
+    /* 11. Brand Enhancements & Overrides */
+    wp_enqueue_style(
+        'kent-brand-enhancements',
+        get_stylesheet_directory_uri() . '/css/9-brand-enhancements.css',
+        [ 'kent-responsive' ],
+        filemtime( get_stylesheet_directory() . '/css/9-brand-enhancements.css' )
+    );
+
+    /* 12. Search page styles (conditional) */
     if ( is_search() ) {
         wp_enqueue_style(
             'yasmin-search-css',
             get_stylesheet_directory_uri() . '/css/search.css',
-            [ 'kent-responsive' ],
+            [ 'kent-brand-enhancements' ],
             filemtime( get_stylesheet_directory() . '/css/search.css' )
         );
     }

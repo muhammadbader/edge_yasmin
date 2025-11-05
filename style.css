@@ -10,7 +10,7 @@ Author URI: https://yoursite.com
 /**
  * This file is intentionally minimal.
  * All styles are organized in the /css/ folder:
- * 
+ *
  * - 1-variables.css    : Design system (colors, spacing, etc.)
  * - 2-layout.css       : Main structure & layout
  * - 3-components.css   : Reusable components
@@ -19,139 +19,10 @@ Author URI: https://yoursite.com
  * - 6-header.css       : Navigation & menus
  * - 7-slider.css       : Product sliders
  * - 8-responsive.css   : All media queries
+ * - 9-brand-enhancements.css : Brand enhancements & overrides
  * - search.css         : Search page specific styles
- * 
+ *
  * Files are loaded in order via functions.php
  */
 
-/* === KENTS BRAND ENHANCEMENTS === */
-
-/* Modern body background with subtle warmth */
-body {
-  background: linear-gradient(135deg, #FAF8F6 0%, #FFFFFF 100%);
-}
-
-/* Accent highlights for interactive elements */
-::selection {
-  background: var(--primary-color);
-  color: white;
-}
-
-/* Enhanced link styling for better brand consistency */
-a:focus-visible {
-  outline: 3px solid var(--primary-color);
-  outline-offset: 3px;
-  border-radius: 2px;
-}
-
-/* Subtle brand accent on page headers */
-.site-header,
-.ast-main-header-wrap {
-  border-bottom: 2px solid transparent;
-  background: linear-gradient(to bottom, #FFFFFF 0%, rgba(250, 248, 246, 0.95) 100%);
-  box-shadow: 0 2px 12px rgba(34, 28, 28, 0.06);
-}
-
-/* Smooth scrolling for better UX */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Modern button reset for consistent styling */
-button, .button, input[type="submit"] {
-  transition: all var(--transition-base);
-}
-
-button:hover, .button:hover, input[type="submit"]:hover {
-  transform: translateY(-1px);
-  box-shadow: var(--shadow-md);
-}
-
-/* Enhanced card hover effects with copper accent */
-.ast-post-card:hover,
-.post:hover {
-  box-shadow: var(--shadow-copper);
-}
-
-/* Accent border for active/focused inputs */
-input:focus, textarea:focus, select:focus {
-  border-color: var(--primary-color);
-  box-shadow: var(--shadow-glow);
-  outline: none;
-}
-
-/* Modern badge/tag styling */
-.tag, .badge, .category-badge {
-  background: var(--gradient-warm);
-  color: white;
-  padding: 6px 14px;
-  border-radius: var(--radius-full);
-  font-weight: var(--font-semibold);
-  font-size: var(--text-sm);
-  box-shadow: var(--shadow-sm);
-  transition: all var(--transition-fast);
-}
-
-.tag:hover, .badge:hover, .category-badge:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
-}
-
-/* Professional footer styling */
-.site-footer {
-  background: var(--secondary-color);
-  color: var(--gray-100);
-  border-top: 3px solid var(--primary-color);
-}
-
-.site-footer a {
-  color: var(--primary-light);
-  transition: color var(--transition-fast);
-}
-
-.site-footer a:hover {
-  color: var(--primary-lighter);
-}
-
-/* Loading states with brand colors */
-.loading, .spinner {
-  border-color: var(--gray-200);
-  border-top-color: var(--primary-color);
-}
-
-/* Brand accent for primary CTAs */
-.cta-button, .primary-action {
-  background: var(--gradient-primary);
-  color: white;
-  padding: 14px 32px;
-  border-radius: var(--radius-lg);
-  font-weight: var(--font-semibold);
-  box-shadow: var(--shadow-md);
-  border: none;
-  cursor: pointer;
-  transition: all var(--transition-base);
-}
-
-.cta-button:hover, .primary-action:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-xl);
-  background: var(--gradient-warm);
-}
-
-/* Secondary action buttons with accent color */
-.secondary-action {
-  background: transparent;
-  color: var(--accent-color);
-  border: 2px solid var(--accent-color);
-  padding: 12px 30px;
-  border-radius: var(--radius-lg);
-  font-weight: var(--font-semibold);
-  transition: all var(--transition-base);
-}
-
-.secondary-action:hover {
-  background: var(--accent-color);
-  color: white;
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
-}
+/* You can add quick fixes or overrides below if needed */
