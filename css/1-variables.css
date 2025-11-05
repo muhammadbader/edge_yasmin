@@ -1,17 +1,19 @@
 /* ============================================
-   KENT FACTORY - DESIGN SYSTEM VARIABLES
-   Load this file FIRST
+   KENT FACTORY - ARABIAN TRADING DESIGN SYSTEM
+   Modern Arabian aesthetics with trader spirit
+   Hebrew RTL optimized
    ============================================ */
 
-/* === MODERN FONTS === */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+/* === HEBREW & ARABIC FONTS === */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Almarai:wght@300;400;700;800&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=Heebo:wght@300;400;500;600;700;800;900&display=swap');
 
 :root {
-  /* === TYPOGRAPHY === */
-  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --font-heading: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  /* === TYPOGRAPHY - RTL OPTIMIZED === */
+  --font-body: 'Heebo', 'IBM Plex Sans Arabic', 'Cairo', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-heading: 'Heebo', 'Almarai', 'Cairo', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-arabic: 'Cairo', 'IBM Plex Sans Arabic', sans-serif;
 
-  /* Font sizes - fluid responsive scale */
+  /* Font sizes - fluid responsive scale optimized for Hebrew/Arabic */
   --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);       /* 12-14px */
   --text-sm: clamp(0.875rem, 0.825rem + 0.25vw, 1rem);        /* 14-16px */
   --text-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);       /* 16-18px */
@@ -29,83 +31,112 @@
   --font-semibold: 600;
   --font-bold: 700;
   --font-extrabold: 800;
+  --font-black: 900;
 
-  /* Line heights */
-  --leading-tight: 1.25;
-  --leading-snug: 1.375;
-  --leading-normal: 1.5;
-  --leading-relaxed: 1.625;
+  /* Line heights - optimized for Hebrew/Arabic readability */
+  --leading-tight: 1.35;
+  --leading-snug: 1.45;
+  --leading-normal: 1.6;
+  --leading-relaxed: 1.75;
   --leading-loose: 2;
 
-  /* Letter spacing */
-  --tracking-tighter: -0.05em;
-  --tracking-tight: -0.025em;
+  /* Letter spacing - adjusted for RTL */
+  --tracking-tighter: -0.03em;
+  --tracking-tight: -0.015em;
   --tracking-normal: 0;
-  --tracking-wide: 0.025em;
-  --tracking-wider: 0.05em;
-  --tracking-widest: 0.1em;
+  --tracking-wide: 0.015em;
+  --tracking-wider: 0.03em;
+  --tracking-widest: 0.06em;
+
+  /* === ARABIAN HERITAGE COLORS === */
+  --gold-warm: #DB8954;              /* Trade, success, prosperity */
+  --gold-light: #E69D6B;             /* Lighter gold for highlights */
+  --gold-lighter: #F0B382;           /* Soft gold for hover states */
+  --gold-dark: #C67642;              /* Deep gold for depth */
+
+  --heritage-red: #8C1514;           /* Courage, confidence, passion */
+  --heritage-light: #A01D1C;         /* Lighter heritage red */
+  --crimson-deep: #7F1919;           /* Power, intensity, depth */
+  --crimson-dark: #6B1414;           /* Darker crimson for shadows */
+
+  --charcoal-deep: #221C1C;          /* Strength, luxury, contrast */
+  --charcoal-light: #3A3232;         /* Lighter charcoal */
+  --charcoal-dark: #1A1616;          /* Deeper charcoal */
 
   /* === BRAND COLORS === */
-  --primary-color: #2563eb;        /* Modern vibrant blue */
-  --primary-dark: #1e40af;         /* Deep blue */
-  --primary-light: #3b82f6;        /* Light blue */
-  --primary-lighter: #60a5fa;      /* Lighter blue for hover states */
+  --primary-color: var(--gold-warm);
+  --primary-dark: var(--gold-dark);
+  --primary-light: var(--gold-light);
+  --primary-lighter: var(--gold-lighter);
 
-  --accent-color: #06b6d4;         /* Cyan accent for energy */
-  --accent-dark: #0891b2;          /* Dark cyan */
-  --accent-light: #22d3ee;         /* Light cyan */
+  --accent-color: var(--heritage-red);
+  --accent-dark: var(--crimson-deep);
+  --accent-light: var(--heritage-light);
 
-  --secondary-color: #f8fafc;      /* Subtle off-white */
-  --secondary-dark: #f1f5f9;       /* Light gray background */
+  --secondary-color: var(--charcoal-deep);
+  --secondary-dark: var(--charcoal-dark);
+  --secondary-light: var(--charcoal-light);
 
-  /* === MODERN GRAYS === */
-  --gray-50: #f8fafc;
-  --gray-100: #f1f5f9;
-  --gray-200: #e2e8f0;
-  --gray-300: #cbd5e1;
-  --gray-400: #94a3b8;
-  --gray-500: #64748b;
-  --gray-600: #475569;
-  --gray-700: #334155;
-  --gray-800: #1e293b;
-  --gray-900: #0f172a;
+  /* === ARABIAN-INSPIRED GRAYS (warm undertones) === */
+  --gray-50: #FAF8F6;              /* Warm off-white - desert sand inspiration */
+  --gray-100: #F5F2EE;             /* Light warm gray - silk */
+  --gray-200: #E8E3DD;             /* Soft warm gray - aged parchment */
+  --gray-300: #D1C9BF;             /* Medium warm gray - stone */
+  --gray-400: #A89F93;             /* Warm mid-tone - clay */
+  --gray-500: #7D7469;             /* Warm neutral - earth */
+  --gray-600: #5A534B;             /* Dark warm gray - leather */
+  --gray-700: #3D372F;             /* Deep warm gray - wood */
+  --gray-800: #2B2621;             /* Rich dark brown - coffee */
+  --gray-900: #1A1715;             /* Almost black brown - ink */
 
   /* === TEXT COLORS === */
-  --text-primary: #0f172a;         /* Near black */
-  --text-secondary: #475569;       /* Medium gray */
-  --text-light: #94a3b8;           /* Light gray */
-  --text-muted: #cbd5e1;           /* Very light gray */
+  --text-primary: var(--charcoal-deep);
+  --text-secondary: var(--gray-600);
+  --text-light: var(--gray-500);
+  --text-muted: var(--gray-400);
+  --text-on-dark: var(--gray-50);
+  --text-gold: var(--gold-warm);
 
   /* === STATUS COLORS === */
   --success: #10b981;
   --warning: #f59e0b;
-  --error: #ef4444;
-  --info: #3b82f6;
+  --error: var(--heritage-red);
+  --info: var(--gold-warm);
 
-  /* === BORDERS === */
-  --border-color: #e2e8f0;
-  --border-light: #f1f5f9;
-  --border-dark: #cbd5e1;
+  /* === BORDERS - ARABIAN ELEGANCE === */
+  --border-color: var(--gray-200);
+  --border-light: var(--gray-100);
+  --border-dark: var(--gray-300);
+  --border-gold: rgba(219, 137, 84, 0.3);
+  --border-heritage: rgba(140, 21, 20, 0.3);
 
-  /* === MODERN SHADOWS === */
-  --shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
-  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
-  --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-  --shadow-glow: 0 0 0 4px rgba(37, 99, 235, 0.1);
-  --shadow-glow-accent: 0 0 0 4px rgba(6, 182, 212, 0.1);
+  /* === ARABIAN SHADOWS (warm, soft, luxurious) === */
+  --shadow-xs: 0 1px 2px 0 rgba(34, 28, 28, 0.06);
+  --shadow-sm: 0 1px 3px 0 rgba(34, 28, 28, 0.1), 0 1px 2px -1px rgba(34, 28, 28, 0.08);
+  --shadow-md: 0 4px 6px -1px rgba(34, 28, 28, 0.12), 0 2px 4px -2px rgba(34, 28, 28, 0.08);
+  --shadow-lg: 0 10px 15px -3px rgba(34, 28, 28, 0.14), 0 4px 6px -4px rgba(34, 28, 28, 0.1);
+  --shadow-xl: 0 20px 25px -5px rgba(34, 28, 28, 0.16), 0 8px 10px -6px rgba(34, 28, 28, 0.12);
+  --shadow-2xl: 0 25px 50px -12px rgba(34, 28, 28, 0.3);
+  --shadow-inner: inset 0 2px 4px 0 rgba(34, 28, 28, 0.06);
 
-  /* === MODERN BORDER RADIUS === */
-  --radius-sm: 6px;
+  /* Colored shadows for premium depth */
+  --shadow-gold: 0 8px 24px -4px rgba(219, 137, 84, 0.3);
+  --shadow-gold-lg: 0 12px 32px -6px rgba(219, 137, 84, 0.4);
+  --shadow-heritage: 0 8px 24px -4px rgba(140, 21, 20, 0.25);
+  --shadow-copper: var(--shadow-gold);
+  --shadow-glow: 0 0 0 4px rgba(219, 137, 84, 0.15);
+  --shadow-glow-accent: 0 0 0 4px rgba(140, 21, 20, 0.12);
+
+  /* === ARABIAN GEOMETRIC BORDER RADIUS === */
+  --radius-sm: 4px;
   --radius-md: 8px;
   --radius-lg: 12px;
   --radius-xl: 16px;
   --radius-2xl: 24px;
+  --radius-3xl: 32px;
   --radius-full: 9999px;
 
-  /* === SPACING SYSTEM === */
+  /* === SPACING SYSTEM - GOLDEN RATIO INSPIRED === */
   --space-xs: 8px;
   --space-sm: 12px;
   --space-md: 16px;
@@ -114,27 +145,59 @@
   --space-2xl: 48px;
   --space-3xl: 64px;
   --space-4xl: 96px;
+  --space-5xl: 128px;
 
-  /* === SMOOTH TRANSITIONS === */
+  /* === SMOOTH TRANSITIONS (flowing like trade routes) === */
   --transition-fast: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
   --transition-base: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-bounce: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  --transition-bounce: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  --transition-smooth: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 
-  /* === MODERN GRADIENTS === */
-  --gradient-primary: linear-gradient(135deg, #3b82f6 0%, #2563eb 50%, #1e40af 100%);
-  --gradient-accent: linear-gradient(135deg, #22d3ee 0%, #06b6d4 50%, #0891b2 100%);
-  --gradient-hero: linear-gradient(135deg, #1e40af 0%, #2563eb 50%, #3b82f6 100%);
-  --gradient-subtle: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
-  --gradient-overlay: linear-gradient(180deg, rgba(15, 23, 42, 0) 0%, rgba(15, 23, 42, 0.8) 100%);
-  --gradient-shine: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.3) 50%, transparent 100%);
+  /* === ARABIAN HERITAGE GRADIENTS === */
+  --gradient-primary: linear-gradient(135deg, #DB8954 0%, #C67642 50%, #B8693A 100%);
+  --gradient-gold: var(--gradient-primary);
+  --gradient-accent: linear-gradient(135deg, #8C1514 0%, #7F1919 50%, #6B1414 100%);
+  --gradient-heritage: var(--gradient-accent);
+  --gradient-hero: linear-gradient(135deg, #221C1C 0%, #3A3232 30%, #DB8954 100%);
+  --gradient-luxury: var(--gradient-hero);
+  --gradient-warm: linear-gradient(135deg, #E69D6B 0%, #DB8954 50%, #C67642 100%);
+  --gradient-sunset: linear-gradient(135deg, #DB8954 0%, #8C1514 50%, #7F1919 100%);
+  --gradient-prestige: linear-gradient(135deg, #7F1919 0%, #DB8954 100%);
+  --gradient-bold: var(--gradient-prestige);
+  --gradient-silk: linear-gradient(180deg, #FAF8F6 0%, #F5F2EE 100%);
+  --gradient-subtle: var(--gradient-silk);
+  --gradient-overlay: linear-gradient(180deg, rgba(34, 28, 28, 0) 0%, rgba(34, 28, 28, 0.85) 100%);
+  --gradient-shine: linear-gradient(90deg, transparent 0%, rgba(219, 137, 84, 0.2) 50%, transparent 100%);
+
+  /* === ARABIAN GEOMETRIC PATTERNS (CSS variables for use in backgrounds) === */
+  --pattern-diamond:
+    repeating-linear-gradient(45deg, transparent, transparent 20px, rgba(219, 137, 84, 0.03) 20px, rgba(219, 137, 84, 0.03) 40px),
+    repeating-linear-gradient(-45deg, transparent, transparent 20px, rgba(140, 21, 20, 0.02) 20px, rgba(140, 21, 20, 0.02) 40px);
+
+  --pattern-hexagon:
+    radial-gradient(circle at 0 0, transparent 20%, rgba(219, 137, 84, 0.03) 20.5%, transparent 21%),
+    radial-gradient(circle at 100% 100%, transparent 20%, rgba(219, 137, 84, 0.03) 20.5%, transparent 21%);
+
+  --pattern-stars:
+    radial-gradient(circle at 25% 25%, rgba(219, 137, 84, 0.02) 0%, transparent 40%),
+    radial-gradient(circle at 75% 75%, rgba(140, 21, 20, 0.02) 0%, transparent 40%),
+    radial-gradient(circle at 25% 75%, rgba(219, 137, 84, 0.015) 0%, transparent 40%),
+    radial-gradient(circle at 75% 25%, rgba(140, 21, 20, 0.015) 0%, transparent 40%);
+
+  --pattern-geometric:
+    linear-gradient(45deg, rgba(219, 137, 84, 0.02) 25%, transparent 25%),
+    linear-gradient(-45deg, rgba(219, 137, 84, 0.02) 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, rgba(140, 21, 20, 0.015) 75%),
+    linear-gradient(-45deg, transparent 75%, rgba(140, 21, 20, 0.015) 75%);
 
   /* === Z-INDEX SCALE === */
   --z-dropdown: 100;
   --z-sticky: 200;
   --z-fixed: 300;
-  --z-modal: 9999;
   --z-modal-backdrop: 9998;
+  --z-modal: 9999;
+  --z-tooltip: 10000;
 
   /* === BREAKPOINTS (for JS usage) === */
   --bp-mobile: 480px;
@@ -144,11 +207,22 @@
   --bp-ultra: 1440px;
 }
 
-/* === RTL SUPPORT === */
+/* === RTL FOUNDATION === */
 html[dir="rtl"],
-.rtl-layout {
+html[lang="he"],
+html[lang="ar"],
+body {
   direction: rtl;
   text-align: right;
+}
+
+/* === HEBREW/ARABIC TEXT RENDERING === */
+body {
+  font-family: var(--font-body);
+  font-feature-settings: "liga" 1, "calt" 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 /* === ACCESSIBILITY === */
@@ -156,14 +230,29 @@ html[dir="rtl"],
   *,
   *::before,
   *::after {
-    animation-duration: 0.01ms;
-    animation-iteration-count: 1;
-    transition-duration: 0.01ms;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }
 
-/* === FOCUS STYLES === */
+/* === FOCUS STYLES (premium gold) === */
 *:focus-visible {
   outline: 3px solid var(--primary-color);
-  outline-offset: 2px;
+  outline-offset: 3px;
+  border-radius: var(--radius-sm);
+}
+
+/* === SELECTION STYLING === */
+::selection {
+  background-color: var(--gold-warm);
+  color: white;
+  text-shadow: none;
+}
+
+::-moz-selection {
+  background-color: var(--gold-warm);
+  color: white;
+  text-shadow: none;
 }

@@ -86,28 +86,52 @@ add_action( 'wp_enqueue_scripts', function () {
         filemtime( get_stylesheet_directory() . '/css/7-slider.css' )
     );
     
-    /* 10. Responsive Styles (MUST BE LAST) */
+    /* 10. Responsive Styles */
     wp_enqueue_style(
         'kent-responsive',
         get_stylesheet_directory_uri() . '/css/8-responsive.css',
-        [ 
-            'kent-variables', 
-            'kent-layout', 
-            'kent-components', 
-            'kent-single-product', 
-            'kent-producer-archive', 
-            'kent-header', 
-            'kent-slider' 
+        [
+            'kent-variables',
+            'kent-layout',
+            'kent-components',
+            'kent-single-product',
+            'kent-producer-archive',
+            'kent-header',
+            'kent-slider'
         ],
         filemtime( get_stylesheet_directory() . '/css/8-responsive.css' )
     );
 
-    /* 11. Search page styles (conditional) */
+    /* 11. Brand Enhancements & Overrides */
+    wp_enqueue_style(
+        'kent-brand-enhancements',
+        get_stylesheet_directory_uri() . '/css/9-brand-enhancements.css',
+        [ 'kent-responsive' ],
+        filemtime( get_stylesheet_directory() . '/css/9-brand-enhancements.css' )
+    );
+
+    /* 12. Mobile Premium Experience */
+    wp_enqueue_style(
+        'kent-mobile-premium',
+        get_stylesheet_directory_uri() . '/css/10-mobile-premium.css',
+        [ 'kent-brand-enhancements' ],
+        filemtime( get_stylesheet_directory() . '/css/10-mobile-premium.css' )
+    );
+
+    /* 13. Arabian Cultural Elements */
+    wp_enqueue_style(
+        'kent-arabian-culture',
+        get_stylesheet_directory_uri() . '/css/11-arabian-culture.css',
+        [ 'kent-mobile-premium' ],
+        filemtime( get_stylesheet_directory() . '/css/11-arabian-culture.css' )
+    );
+
+    /* 14. Search page styles (conditional) */
     if ( is_search() ) {
         wp_enqueue_style(
             'yasmin-search-css',
             get_stylesheet_directory_uri() . '/css/search.css',
-            [ 'kent-responsive' ],
+            [ 'kent-arabian-culture' ],
             filemtime( get_stylesheet_directory() . '/css/search.css' )
         );
     }
