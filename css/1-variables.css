@@ -45,36 +45,37 @@
   --tracking-wider: 0.05em;
   --tracking-widest: 0.1em;
 
-  /* === BRAND COLORS === */
-  --primary-color: #2563eb;        /* Modern vibrant blue */
-  --primary-dark: #1e40af;         /* Deep blue */
-  --primary-light: #3b82f6;        /* Light blue */
-  --primary-lighter: #60a5fa;      /* Lighter blue for hover states */
+  /* === KENTS BRAND COLORS === */
+  --primary-color: #DB8954;        /* Warm copper/bronze - iconic & professional */
+  --primary-dark: #C67642;         /* Deeper copper */
+  --primary-light: #E69D6B;        /* Lighter copper */
+  --primary-lighter: #F0B382;      /* Soft copper for hover states */
 
-  --accent-color: #06b6d4;         /* Cyan accent for energy */
-  --accent-dark: #0891b2;          /* Dark cyan */
-  --accent-light: #22d3ee;         /* Light cyan */
+  --accent-color: #8C1514;         /* Deep burgundy red - bold accent */
+  --accent-dark: #7F1919;          /* Crimson red - dramatic */
+  --accent-light: #A01D1C;         /* Lighter burgundy */
 
-  --secondary-color: #f8fafc;      /* Subtle off-white */
-  --secondary-dark: #f1f5f9;       /* Light gray background */
+  --secondary-color: #221C1C;      /* Rich dark brown - sophisticated base */
+  --secondary-dark: #1A1616;       /* Deeper brown */
+  --secondary-light: #3A3232;      /* Lighter brown for contrast */
 
   /* === MODERN GRAYS === */
-  --gray-50: #f8fafc;
-  --gray-100: #f1f5f9;
-  --gray-200: #e2e8f0;
-  --gray-300: #cbd5e1;
-  --gray-400: #94a3b8;
-  --gray-500: #64748b;
-  --gray-600: #475569;
-  --gray-700: #334155;
-  --gray-800: #1e293b;
-  --gray-900: #0f172a;
+  --gray-50: #FAF8F6;              /* Warm off-white */
+  --gray-100: #F5F2EE;             /* Light warm gray */
+  --gray-200: #E8E3DD;             /* Soft warm gray */
+  --gray-300: #D1C9BF;             /* Medium warm gray */
+  --gray-400: #A89F93;             /* Warm mid-tone */
+  --gray-500: #7D7469;             /* Warm neutral */
+  --gray-600: #5A534B;             /* Dark warm gray */
+  --gray-700: #3D372F;             /* Deep warm gray */
+  --gray-800: #2B2621;             /* Rich dark brown */
+  --gray-900: #1A1715;             /* Almost black brown */
 
   /* === TEXT COLORS === */
-  --text-primary: #0f172a;         /* Near black */
-  --text-secondary: #475569;       /* Medium gray */
-  --text-light: #94a3b8;           /* Light gray */
-  --text-muted: #cbd5e1;           /* Very light gray */
+  --text-primary: #221C1C;         /* Rich dark brown - sophisticated */
+  --text-secondary: #5A534B;       /* Warm dark gray */
+  --text-light: #7D7469;           /* Warm neutral */
+  --text-muted: #A89F93;           /* Light warm tone */
 
   /* === STATUS COLORS === */
   --success: #10b981;
@@ -83,19 +84,20 @@
   --info: #3b82f6;
 
   /* === BORDERS === */
-  --border-color: #e2e8f0;
-  --border-light: #f1f5f9;
-  --border-dark: #cbd5e1;
+  --border-color: #E8E3DD;         /* Soft warm gray */
+  --border-light: #F5F2EE;         /* Light warm border */
+  --border-dark: #D1C9BF;          /* Medium warm border */
 
-  /* === MODERN SHADOWS === */
-  --shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
-  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
-  --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-  --shadow-glow: 0 0 0 4px rgba(37, 99, 235, 0.1);
-  --shadow-glow-accent: 0 0 0 4px rgba(6, 182, 212, 0.1);
+  /* === MODERN SHADOWS - WARM TONES === */
+  --shadow-xs: 0 1px 2px 0 rgba(34, 28, 28, 0.06);
+  --shadow-sm: 0 1px 3px 0 rgba(34, 28, 28, 0.12), 0 1px 2px -1px rgba(34, 28, 28, 0.08);
+  --shadow-md: 0 4px 6px -1px rgba(34, 28, 28, 0.12), 0 2px 4px -2px rgba(34, 28, 28, 0.08);
+  --shadow-lg: 0 10px 15px -3px rgba(34, 28, 28, 0.14), 0 4px 6px -4px rgba(34, 28, 28, 0.1);
+  --shadow-xl: 0 20px 25px -5px rgba(34, 28, 28, 0.16), 0 8px 10px -6px rgba(34, 28, 28, 0.12);
+  --shadow-2xl: 0 25px 50px -12px rgba(34, 28, 28, 0.3);
+  --shadow-glow: 0 0 0 4px rgba(219, 137, 84, 0.15);
+  --shadow-glow-accent: 0 0 0 4px rgba(140, 21, 20, 0.12);
+  --shadow-copper: 0 8px 24px -4px rgba(219, 137, 84, 0.25);
 
   /* === MODERN BORDER RADIUS === */
   --radius-sm: 6px;
@@ -121,13 +123,15 @@
   --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   --transition-bounce: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
-  /* === MODERN GRADIENTS === */
-  --gradient-primary: linear-gradient(135deg, #3b82f6 0%, #2563eb 50%, #1e40af 100%);
-  --gradient-accent: linear-gradient(135deg, #22d3ee 0%, #06b6d4 50%, #0891b2 100%);
-  --gradient-hero: linear-gradient(135deg, #1e40af 0%, #2563eb 50%, #3b82f6 100%);
-  --gradient-subtle: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
-  --gradient-overlay: linear-gradient(180deg, rgba(15, 23, 42, 0) 0%, rgba(15, 23, 42, 0.8) 100%);
-  --gradient-shine: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.3) 50%, transparent 100%);
+  /* === MODERN GRADIENTS - KENTS BRAND === */
+  --gradient-primary: linear-gradient(135deg, #DB8954 0%, #C67642 50%, #B8693A 100%);
+  --gradient-accent: linear-gradient(135deg, #8C1514 0%, #7F1919 50%, #6B1414 100%);
+  --gradient-hero: linear-gradient(135deg, #221C1C 0%, #3A3232 30%, #DB8954 100%);
+  --gradient-warm: linear-gradient(135deg, #E69D6B 0%, #DB8954 50%, #C67642 100%);
+  --gradient-subtle: linear-gradient(180deg, #FAF8F6 0%, #F5F2EE 100%);
+  --gradient-overlay: linear-gradient(180deg, rgba(34, 28, 28, 0) 0%, rgba(34, 28, 28, 0.85) 100%);
+  --gradient-shine: linear-gradient(90deg, transparent 0%, rgba(219, 137, 84, 0.2) 50%, transparent 100%);
+  --gradient-bold: linear-gradient(135deg, #8C1514 0%, #DB8954 100%);
 
   /* === Z-INDEX SCALE === */
   --z-dropdown: 100;

@@ -88,21 +88,21 @@ a:hover {
   margin: 0 auto;
   padding: var(--space-lg);
   min-height: 100vh;
-  background: var(--secondary-color);
+  background: var(--gray-50);
 }
 
 /* === SIDEBAR (Right in RTL) === */
 .producer-sidebar {
   flex: 0 0 320px;
-  background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
-  border-radius: var(--radius-md);
+  background: linear-gradient(145deg, #FFFFFF 0%, #FAF8F6 100%);
+  border-radius: var(--radius-lg);
   padding: var(--space-lg);
   min-height: 400px;
   max-height: calc(100vh - 100px);
   position: sticky;
   top: 80px;
-  box-shadow: var(--shadow-md);
-  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-lg);
+  border: 2px solid var(--border-color);
   order: 1;
   display: flex;
   flex-direction: column;
@@ -112,17 +112,18 @@ a:hover {
 
 /* Custom scrollbar for sidebar */
 .producer-sidebar::-webkit-scrollbar {
-  width: 6px;
+  width: 8px;
 }
 
 .producer-sidebar::-webkit-scrollbar-track {
-  background: rgba(154, 105, 15, 0.05);
-  border-radius: 3px;
+  background: var(--gray-100);
+  border-radius: 4px;
 }
 
 .producer-sidebar::-webkit-scrollbar-thumb {
-  background: var(--primary-color);
-  border-radius: 3px;
+  background: var(--gradient-primary);
+  border-radius: 4px;
+  border: 2px solid var(--gray-100);
 }
 
 .producer-sidebar::-webkit-scrollbar-thumb:hover {

@@ -94,7 +94,7 @@
 }
 
 .producer-card:hover .card-overlay {
-  opacity: 0.95;
+  opacity: 0.92;
 }
 
 .overlay-text {
@@ -344,7 +344,7 @@
 }
 
 .producer-list .producer-item:hover {
-  background: rgba(154, 105, 15, 0.04);
+  background: rgba(219, 137, 84, 0.06);
   transform: none;
 }
 
