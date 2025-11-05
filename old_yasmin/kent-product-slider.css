@@ -1,0 +1,157 @@
+/* Modernized Kent Product Slider Styling */
+
+.kent-product-slider {
+  margin: 4rem auto;
+  max-width: 1280px;
+  padding: 0 2rem;
+  position: relative;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Each slide item */
+.kent-product-slider .slider-item {
+  padding: 0 12px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.kent-product-slider .slider-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+}
+
+/* Images fill the slide with smooth scaling */
+.kent-product-slider .slider-item img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.kent-product-slider .slider-item:hover img {
+  transform: scale(1.05);
+}
+
+/* Gradient overlay for better text readability */
+.kent-product-slider .slider-item::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 120px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent);
+  pointer-events: none;
+}
+
+/* Slide title and price overlay */
+.kent-product-slider .slide-title {
+  position: absolute;
+  bottom: 24px;
+  left: 16px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-align: left;
+  margin: 0;
+  z-index: 1;
+}
+
+.kent-product-slider .slide-title a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.kent-product-slider .slide-title a:hover {
+  color: #f0c14b;
+}
+
+.kent-product-slider .slide-price {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+  color: #fff;
+  font-weight: 400;
+  font-size: 0.9rem;
+  z-index: 1;
+}
+
+/* Slick arrows - sleek, modern buttons */
+.kent-product-slider .slick-prev,
+.kent-product-slider .slick-next {
+  width: 48px;
+  height: 48px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.kent-product-slider .slick-prev:hover,
+.kent-product-slider .slick-next:hover {
+  background: #9a690f;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.kent-product-slider .slick-prev { left: -30px; }
+.kent-product-slider .slick-next { right: -30px; }
+
+/* Remove default arrow fonts */
+.kent-product-slider .slick-prev:before,
+.kent-product-slider .slick-next:before {
+  content: none;
+}
+
+/* Custom SVG arrows color */
+.kent-product-slider .slick-prev svg,
+.kent-product-slider .slick-next svg {
+  stroke: #291901;
+  width: 24px;
+  height: 24px;
+}
+
+/* Dots styling - modern and minimal */
+.kent-product-slider .slick-dots {
+  bottom: -40px;
+}
+
+.kent-product-slider .slick-dots li {
+  margin: 0 8px;
+}
+
+.kent-product-slider .slick-dots li button:before {
+  font-size: 10px;
+  color: #d1d1d1;
+  opacity: 1;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.kent-product-slider .slick-dots li.slick-active button:before {
+  color: #9a690f;
+  transform: scale(1.5);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .kent-product-slider .slider-item img {
+    height: 200px;
+  }
+  .kent-product-slider .slide-title {
+    font-size: 1rem;
+  }
+  .kent-product-slider .slide-price {
+    font-size: 0.85rem;
+  }
+}

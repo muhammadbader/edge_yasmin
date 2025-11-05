@@ -1,0 +1,183 @@
+/*
+Theme Name: Mr yasmin Child
+Template: astra
+Version: 1.0
+*/
+.ast-archive-entry-banner {
+    display: none !important;
+}
+
+/* === CATEGORY GRID STYLES (Independent from producer-grid) === */
+.category-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 0 16px;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+/* Category cards - default layout */
+.category-grid .category-card {
+  flex: 0 0 calc(50% - 10px);
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #f0f0f0;
+}
+
+.category-grid .category-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+  border-color: #ddd;
+}
+
+/* Category card image */
+.category-grid .card-image {
+  width: 100%;
+  aspect-ratio: 1/1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #f8f9fa 0%, #f1f3f4 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.category-grid .card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.category-grid .category-card:hover .card-image img {
+  transform: scale(1.1);
+}
+
+.category-grid .no-thumb {
+  font-size: 3rem;
+  color: #bbb;
+  opacity: 0.7;
+}
+
+/* Category card body */
+.category-grid .card-body {
+  padding: 20px;
+  text-align: center;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+}
+
+.category-grid .card-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.3;
+  color: #333;
+  text-decoration: none;
+}
+
+.category-grid .card-link {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.category-grid .card-link:hover .card-title {
+  color: #9a690f;
+}
+
+/* === RESPONSIVE BREAKPOINTS FOR CATEGORY GRID === */
+
+/* Mobile phones - 2 columns with proper spacing */
+@media (max-width: 480px) {
+  .category-grid {
+    gap: 12px;
+    padding: 0 8px;
+    justify-content: space-between;
+  }
+  
+  .category-grid .category-card {
+    flex: 0 0 calc(50% - 6px); /* Account for 12px gap */
+    margin: 0;
+  }
+  
+  /* Reduce padding on mobile */
+  .category-grid .card-body {
+    padding: 15px;
+  }
+  
+  .category-grid .card-title {
+    font-size: 1rem;
+  }
+}
+
+/* Small tablets - 2 columns */
+@media (min-width: 481px) and (max-width: 1023px) {
+  .category-grid {
+    gap: 20px;
+    padding: 0 20px;
+    justify-content: space-between;
+  }
+  
+  .category-grid .category-card {
+    flex: 0 0 calc(50% - 10px); /* Account for 20px gap */
+	  min-width: 100px;
+  }
+}
+
+/* PC/Desktop - 3 columns */
+@media (min-width: 1024px) {
+  .category-grid {
+    gap: 24px;
+    padding: 0;
+    justify-content: flex-start;
+  }
+  
+  .category-grid .category-card {
+    flex: 0 0 calc(33.333% - 16px); /* Account for 24px gap */
+  }
+}
+
+/* Large desktops - maintain 3 columns with more spacing */
+@media (min-width: 1200px) {
+  .category-grid {
+    gap: 28px;
+  }
+  
+  .category-grid .category-card {
+    flex: 0 0 calc(33.333% - 18.67px); /* Account for 28px gap */
+  }
+}
+
+/* === ACCESSIBILITY AND INTERACTIONS === */
+.category-grid .category-card:focus-within {
+  outline: 3px solid #9a690f;
+  outline-offset: 2px;
+}
+
+/* Smooth animations */
+@media (prefers-reduced-motion: reduce) {
+  .category-grid .category-card,
+  .category-grid .card-image img {
+    transition: none;
+  }
+  
+  .category-grid .category-card:hover {
+    transform: none;
+  }
+  
+  .category-grid .category-card:hover .card-image img {
+    transform: none;
+  }
+}

@@ -1,0 +1,112 @@
+/* ============================================
+   LAYOUT STRUCTURES
+   ============================================ */
+
+/* === HIDE ARCHIVE BANNER === */
+.ast-archive-entry-banner {
+  display: none;
+}
+
+/* === SEARCH PAGE === */
+.ast-container h1 {
+  display: none;
+}
+
+/* === PRODUCER LAYOUT (Archive & Taxonomy) === */
+.producer-layout {
+  display: flex;
+  gap: var(--space-2xl);
+  max-width: 1400px;
+  min-width: 70%;
+  margin: 0 auto;
+  padding: var(--space-lg);
+  min-height: 100vh;
+  background: var(--secondary-color);
+}
+
+/* === SIDEBAR (Right in RTL) === */
+.producer-sidebar {
+  flex: 0 0 320px;
+  background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  min-height: 400px;
+  max-height: calc(100vh - 100px);
+  position: sticky;
+  top: 80px;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-color);
+  order: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar for sidebar */
+.producer-sidebar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.producer-sidebar::-webkit-scrollbar-track {
+  background: rgba(154, 105, 15, 0.05);
+  border-radius: 3px;
+}
+
+.producer-sidebar::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 3px;
+}
+
+.producer-sidebar::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-dark);
+}
+
+/* === MAIN CONTENT (Left in RTL) === */
+.producer-content {
+  flex: 1;
+  min-width: 0;
+  order: 2;
+}
+
+/* === SINGLE PRODUCT LAYOUT === */
+.single-product.producer-layout {
+  max-width: 1400px;
+}
+
+.single-product .producer-sidebar {
+  width: 250px;
+  flex-shrink: 0;
+}
+
+.single-product .producer-content {
+  margin-top: var(--space-lg);
+  flex: 1;
+}
+
+/* === SINGLE PRODUCT WITHOUT SIDEBAR === */
+.single-product.no-sidebar {
+  display: block;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: var(--space-xl);
+}
+
+.single-product.no-sidebar .producer-content {
+  width: 100%;
+  max-width: 100%;
+  margin-top: 0;
+}
+
+.single-product.no-sidebar .single-header {
+  text-align: center;
+}
+
+.single-product.no-sidebar .single-title {
+  font-size: 2.5rem;
+}
+
+.single-product.no-sidebar .single-card {
+  max-width: 700px;
+  margin: var(--space-2xl) auto;
+}

@@ -1,0 +1,215 @@
+/* ─── single-product.css ─── */
+/* 1) Layout & spacing */
+.single-product.producer-layout {
+  display: flex;
+  gap: 48px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 24px;
+}
+.single-product .producer-content {
+  margin-top: 24px;
+  flex: 1;
+}
+/* Sidebar keep full height */
+.single-product .producer-sidebar {
+  overflow: visible !important;
+  width: 250px;
+  flex-shrink: 0;
+  background: black;
+}
+
+/* 2) Producers shortcode - FORCE FULL HEIGHT */
+.single-meta-top {
+  margin-bottom: 24px;
+}
+
+/* Force the producers container to expand */
+.producers-container {
+  min-height: 400px !important;
+  height: auto !important;
+  width: 100% !important;
+  padding: 20px !important;
+  background: #f8f9fa !important;
+  border-radius: 8px !important;
+  border: 1px solid #e9ecef !important;
+}
+
+/* Style each producer item */
+.producer-item {
+  margin-bottom: 20px !important;
+  padding: 15px !important;
+  background: white !important;
+  border-radius: 6px !important;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
+  border: 1px solid #ddd !important;
+}
+
+.producer-row {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 10px !important;
+}
+
+.producer-field {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  padding: 5px 0 !important;
+}
+
+.producer-label {
+  font-weight: bold !important;
+  color: #333 !important;
+}
+
+.producer-value {
+  color: #666 !important;
+  font-size: 14px !important;
+}
+
+.single-code {
+  margin-top: 12px;
+  font-weight: 600;
+  color: #666;
+  font-size: 16px;
+  padding: 10px;
+  background: #f0f0f0;
+  border-radius: 4px;
+}
+
+/* 3) Card & clickable image */
+.producer-content .single-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+.clickable-image {
+  cursor: zoom-in !important;
+  transition: transform 0.2s ease;
+  display: block;
+}
+
+.clickable-image:hover {
+  transform: scale(1.02);
+}
+
+.single-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* 4) Title & description */
+.single-header {
+  padding: 24px;
+}
+.single-title {
+  margin: 0;
+  font-size: 2rem;
+  color: #333;
+}
+.single-description {
+  padding: 0 24px 24px;
+  line-height: 1.6;
+  color: #666;
+}
+
+/* 5) Modal Zoom - CRITICAL STYLES */
+.image-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 999999;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.image-modal.show {
+  display: flex !important;
+}
+
+.image-modal .modal-img {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+  box-shadow: 0 0 30px rgba(255,255,255,0.3);
+  border-radius: 8px;
+  cursor: default;
+}
+
+/* Close button */
+.modal-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000000;
+  color: #333;
+}
+
+.modal-close:hover {
+  background: white;
+}
+
+/* Prevent body scrolling when modal is open */
+body.modal-open {
+  overflow: hidden;
+}
+
+/* Mobile responsive fixes */
+@media (max-width: 768px) {
+  .single-product.producer-layout {
+    flex-direction: column;
+    gap: 24px;
+    padding: 80px 16px 24px 16px; /* Added top padding for mobile */
+  }
+  
+  .single-product .producer-sidebar {
+    width: 100%;
+    order: 2; /* Moves sidebar below content on mobile */
+  }
+  
+  .single-product .producer-content {
+    margin-top: 0;
+    order: 1;
+  }
+  
+  /* Add spacing above the card container */
+  .producer-content .single-card {
+    margin-top: 24px;
+  }
+  
+  /* Adjust header spacing */
+  .single-header {
+    padding: 16px;
+  }
+  
+  .single-description {
+    padding: 0 16px 16px;
+  }
+  
+  .single-title {
+    font-size: 1.5rem;
+  }
+}
