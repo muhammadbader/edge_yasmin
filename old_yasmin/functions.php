@@ -542,3 +542,116 @@ function yasmin_custom_search_form( $form ) {
     return $form;
 }
 add_filter( 'get_search_form', 'yasmin_custom_search_form' );
+
+// Add meta boxes to product edit screen
+add_action('add_meta_boxes', 'yasmin_add_product_details_meta_boxes');
+function yasmin_add_product_details_meta_boxes() {
+    // Product Details meta box
+    add_meta_box(
+        'product_details',
+        'פרטי מוצר',  // Hebrew: Product Details
+        'yasmin_product_details_callback',
+        'product',  // Your product post type
+        'normal',
+        'high'
+    );
+    
+    // Product Description meta box
+    add_meta_box(
+        'product_description',
+        'תיאור מוצר',  // Hebrew: Product Description
+        'yasmin_product_description_callback',
+        'product',  // Your product post type
+        'normal',
+        'high'
+    );
+}
+
+// Product Details field callback (simple textarea)
+function yasmin_product_details_callback($post) {
+    wp_nonce_field('yasmin_save_product_details', 'yasmin_product_details_nonce');
+    $value = get_post_meta($post->ID, '_product_details', true);
+    ?>
+    <div style="direction: rtl;">
+        <p style="font-size: 14px; color: #666;">
+            הזן פרטים טכניים, מידות, משקל, חומרים וכו'
+        </p>
+        <textarea 
+            name="product_details" 
+            id="product_details" 
+            rows="6" 
+            style="width: 100%; direction: rtl; font-size: 14px; padding: 10px;"
+        ><?php echo esc_textarea($value); ?></textarea>
+        <p style="font-size: 12px; color: #999;">
+            טיפ: השתמש בשורות חדשות לפרטים נפרדים
+        </p>
+    </div>
+    <?php
+}
+
+// Product Description field callback (WYSIWYG editor)
+function yasmin_product_description_callback($post) {
+    wp_nonce_field('yasmin_save_product_description', 'yasmin_product_description_nonce');
+    $value = get_post_meta($post->ID, '_product_description', true);
+    ?>
+    <div style="direction: rtl;">
+        <p style="font-size: 14px; color: #666;">
+            כתוב תיאור מפורט של המוצר, יתרונות, שימושים וכו'
+        </p>
+        <?php
+        wp_editor($value, 'product_description', array(
+            'textarea_name' => 'product_description',
+            'media_buttons' => false,
+            'textarea_rows' => 10,
+            'teeny' => false,
+            'tinymce' => array(
+                'directionality' => 'rtl',
+                'toolbar1' => 'bold,italic,underline,strikethrough,|,bullist,numlist,|,link,unlink,|,undo,redo',
+                'toolbar2' => '',
+            )
+        ));
+        ?>
+    </div>
+    <?php
+}
+
+// Save meta box data
+add_action('save_post', 'yasmin_save_product_details_meta');
+function yasmin_save_product_details_meta($post_id) {
+    // Check autosave
+    if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) return;
+    
+    // Save Product Details
+    if (isset($_POST['yasmin_product_details_nonce']) && 
+        wp_verify_nonce($_POST['yasmin_product_details_nonce'], 'yasmin_save_product_details')) {
+        
+        if (isset($_POST['product_details'])) {
+            $details = sanitize_textarea_field($_POST['product_details']);
+            update_post_meta($post_id, '_product_details', $details);
+        }
+    }
+    
+    // Save Product Description
+    if (isset($_POST['yasmin_product_description_nonce']) && 
+        wp_verify_nonce($_POST['yasmin_product_description_nonce'], 'yasmin_save_product_description')) {
+        
+        if (isset($_POST['product_description'])) {
+            $description = wp_kses_post($_POST['product_description']);
+            update_post_meta($post_id, '_product_description', $description);
+        }
+    }
+}
+
+// Allow contributors/editors to see the meta boxes (not just admins)
+add_filter('user_has_cap', 'yasmin_allow_editors_product_fields', 10, 3);
+function yasmin_allow_editors_product_fields($allcaps, $caps, $args) {
+    // Allow editors and contributors to edit custom fields
+    if (isset($args[0]) && $args[0] == 'edit_post') {
+        if (isset($allcaps['edit_posts']) && $allcaps['edit_posts']) {
+            $allcaps['edit_post_meta'] = true;
+            $allcaps['add_post_meta'] = true;
+            $allcaps['delete_post_meta'] = true;
+        }
+    }
+    return $allcaps;
+}
