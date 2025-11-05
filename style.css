@@ -11,16 +11,17 @@ Author URI: https://yoursite.com
  * This file is intentionally minimal.
  * All styles are organized in the /css/ folder:
  *
- * - 1-variables.css    : Design system (colors, spacing, etc.)
- * - 2-layout.css       : Main structure & layout
- * - 3-components.css   : Reusable components
- * - 4-single-product.css : Single product pages
- * - 5-producer-archive.css : Producer/category archives
- * - 6-header.css       : Navigation & menus
- * - 7-slider.css       : Product sliders
- * - 8-responsive.css   : All media queries
- * - 9-brand-enhancements.css : Brand enhancements & overrides
- * - search.css         : Search page specific styles
+ * - 1-variables.css          : Design system (colors, spacing, etc.)
+ * - 2-layout.css             : Main structure & layout
+ * - 3-components.css         : Reusable components
+ * - 4-single-product.css     : Single product pages
+ * - 5-producer-archive.css   : Producer/category archives
+ * - 6-header.css             : Navigation & menus
+ * - 7-slider.css             : Product sliders
+ * - 8-responsive.css         : All media queries
+ * - 9-brand-enhancements.css : Premium UI/UX enhancements
+ * - 10-mobile-premium.css    : Mobile-first optimizations
+ * - search.css               : Search page specific styles
  *
  * Files are loaded in order via functions.php
  */

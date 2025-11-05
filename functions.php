@@ -110,12 +110,20 @@ add_action( 'wp_enqueue_scripts', function () {
         filemtime( get_stylesheet_directory() . '/css/9-brand-enhancements.css' )
     );
 
-    /* 12. Search page styles (conditional) */
+    /* 12. Mobile Premium Experience */
+    wp_enqueue_style(
+        'kent-mobile-premium',
+        get_stylesheet_directory_uri() . '/css/10-mobile-premium.css',
+        [ 'kent-brand-enhancements' ],
+        filemtime( get_stylesheet_directory() . '/css/10-mobile-premium.css' )
+    );
+
+    /* 13. Search page styles (conditional) */
     if ( is_search() ) {
         wp_enqueue_style(
             'yasmin-search-css',
             get_stylesheet_directory_uri() . '/css/search.css',
-            [ 'kent-brand-enhancements' ],
+            [ 'kent-mobile-premium' ],
             filemtime( get_stylesheet_directory() . '/css/search.css' )
         );
     }
