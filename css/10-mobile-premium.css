@@ -180,8 +180,8 @@
   .producer-field {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 6px;
+    justify-content: flex-start;
+    gap: 4px;
     padding: 2px 0;
     flex-wrap: nowrap;
   }
@@ -191,7 +191,6 @@
     font-size: var(--text-xs); /* Smaller, compact size */
     color: var(--charcoal-deep);
     flex-shrink: 0;
-    min-width: 45px;
     opacity: 0.8;
   }
 
@@ -203,7 +202,6 @@
     padding: 4px 8px;
     border-radius: var(--radius-xs);
     border: 1px solid rgba(219, 137, 84, 0.15);
-    flex: 1;
     text-align: center;
     min-height: 24px; /* Smaller but still tappable */
     display: flex;
