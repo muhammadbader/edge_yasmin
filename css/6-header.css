@@ -67,7 +67,7 @@
   white-space: normal;
   font-family: var(--font-body);
   font-weight: var(--font-medium);
-  font-size: var(--text-base);
+  font-size: var(--text-sm);
   line-height: var(--leading-snug);
   border-radius: var(--radius-md);
   transition: all var(--transition-base);
