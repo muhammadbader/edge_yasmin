@@ -2,28 +2,41 @@
    HEADER & NAVIGATION
    ============================================ */
 
+/* === FIX ASTRA THEME SUBMENU OFFSET === */
+/* Reset any Astra theme default spacing that causes submenu offset */
+.ast-desktop .main-header-menu,
+.ast-desktop .main-header-menu * {
+  margin-top: 0;
+}
+
+.ast-desktop .main-header-menu .sub-menu {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
 /* === DROPDOWN BASE === */
 .ast-desktop .main-header-menu .menu-item-has-children {
   position: relative;
 }
 
 .ast-desktop .main-header-menu .sub-menu {
-  margin: 0;
+  margin: 0 !important;
   padding: 8px;
   min-width: 0;
   max-width: 150px;
-  position: absolute;
+  position: absolute !important;
   z-index: var(--z-dropdown);
   opacity: 0;
   visibility: hidden;
-  transform: translateY(0);
+  transform: translateY(0) !important;
   transition: var(--transition-base);
   pointer-events: none;
   white-space: normal;
   direction: rtl;
   text-align: right;
   right: 0;
-  top: 100%;
+  top: 100% !important;
+  bottom: auto !important;
   left: auto;
 }
 
@@ -32,8 +45,10 @@
 .ast-desktop .main-header-menu .menu-item-has-children:focus-within > .sub-menu {
   opacity: 1;
   visibility: visible;
-  transform: none;
+  transform: none !important;
   pointer-events: all;
+  margin: 0 !important;
+  top: 100% !important;
 }
 
 /* === DROPDOWN PANEL === */
