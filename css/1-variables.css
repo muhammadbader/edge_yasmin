@@ -5,13 +5,13 @@
    ============================================ */
 
 /* === HEBREW & ARABIC FONTS === */
-@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Almarai:wght@300;400;700;800&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=Heebo:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;500;600;700;800;900&family=Assistant:wght@300;400;500;600;700;800&family=Alef:wght@400;700&family=Cairo:wght@300;400;500;600;700;800;900&display=swap');
 
 :root {
   /* === TYPOGRAPHY - RTL OPTIMIZED === */
-  --font-body: 'Heebo', 'IBM Plex Sans Arabic', 'Cairo', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  --font-heading: 'Heebo', 'Almarai', 'Cairo', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  --font-arabic: 'Cairo', 'IBM Plex Sans Arabic', sans-serif;
+  --font-body: 'Assistant', 'Cairo', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-heading: 'Frank Ruhl Libre', 'Alef', 'Cairo', Georgia, serif;
+  --font-arabic: 'Cairo', 'Assistant', sans-serif;
 
   /* Font sizes - fluid responsive scale optimized for Hebrew/Arabic */
   --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);       /* 12-14px */
