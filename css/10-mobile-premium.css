@@ -51,7 +51,7 @@
 
   .ast-mobile-popup-drawer .main-header-menu > li > a {
     padding: 18px 24px;
-    font-size: var(--text-base);
+    font-size: var(--text-sm);
     font-weight: var(--font-semibold);
     border-radius: var(--radius-lg);
     transition: all var(--transition-base);
@@ -88,7 +88,7 @@
 
   .ast-mobile-popup-drawer .sub-menu li a {
     padding: 14px 20px;
-    font-size: var(--text-sm);
+    font-size: var(--text-xs);
     border-radius: var(--radius-md);
   }
 
